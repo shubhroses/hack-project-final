@@ -20,3 +20,6 @@ else
 fi
 "
 
+echo ""
+echo "3. Build docker image and test"
+# vagrant ssh -c "cd ${PROJECT_DIR} && docker build flask:demo . && docker run flask:demo -p 5000:5000"
