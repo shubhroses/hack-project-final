@@ -23,3 +23,12 @@ fi
 echo ""
 echo "3. Build docker image"
 vagrant ssh -c "cd ${PROJECT_DIR} && docker build -t flask-demo ."
+
+echo ""
+echo "4. Make docker image visible to k3s"
+vagrant ssh -c "cd ${PROJECT_DIR} && docker save flask-demo | sudo k3s ctr images import -"
+
+
+echo ""
+echo "5. Apply k8s-deploy"
+vagrant ssh -c "cd ${PROJECT_DIR} && sudo k3s kubectl apply -f k8s-deploy.yaml"
