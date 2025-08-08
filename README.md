@@ -11,4 +11,6 @@ sudo usermod -aG docker vagrant
 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
 
+sudo docker build -t flask-demo .
+
 ```
