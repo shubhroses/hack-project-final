@@ -1,5 +1,5 @@
 ## Initial Installation
-### Step 1. Install Vagrant and QEMU provider for ARM compatibility
+#### Step 1. Install Vagrant and QEMU provider for ARM compatibility
 
 ```bash
 brew install --cask vagrant
@@ -7,7 +7,7 @@ brew install qemu
 vagrant plugin install vagrant-qemu
 ```
 
-### Step 2: Install git, curl, bash-completion, docker, kubectl, and k3s
+#### Step 2: Install git, curl, bash-completion, docker, kubectl, and k3s
 
 ```bash
 # Install git curl bash-completion
