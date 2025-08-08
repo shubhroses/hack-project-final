@@ -21,5 +21,5 @@ fi
 "
 
 echo ""
-echo "3. Build docker image and test"
+echo "3. Build docker image"
 vagrant ssh -c "cd ${PROJECT_DIR} && docker build -t flask-demo ."
