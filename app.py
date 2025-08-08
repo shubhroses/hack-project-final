@@ -1,7 +1,7 @@
 import logging
 import time
 from datetime import datetime
-from flask import Flask
+from flask import Flask, render_template
 from pathlib import Path
 
 app = Flask(__name__)
@@ -15,6 +15,8 @@ logger = logging.getLogger(__name__)
 
 file_path = "/etc/os-release"
 # file_path = "/Users/interview.candidate/codebase/hack-project-final/requirements.txt"
+
+image_path = "image1.png"
 
 @app.route("/")
 def hellp():
@@ -33,6 +35,9 @@ def system_info():
     logging.info(f"Contents of {file_path}: {contents}")
     return contents
 
+@app.route("/home")
+def home():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     logging.info("Starting main application...")

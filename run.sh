@@ -40,3 +40,5 @@ vagrant ssh -c "cd ${PROJECT_DIR} && sudo k3s kubectl rollout restart deployment
 echo ""
 echo "7. Wait for rollout to finish"
 vagrant ssh -c "cd ${PROJECT_DIR} && sudo k3s kubectl rollout status deployment/flask-demo --timeout 60s"
+
+echo "test using: vagrant ssh -c "curl http://localhost:30007/system-info"
